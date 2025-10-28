@@ -1,0 +1,118 @@
+import Link from 'next/link'
+import React from 'react'
+import { motion } from 'motion/react'
+import { FreeMode, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import ArrowIcon from '@/assets/arrow-icon'
+import ProductCard from '@/components/ProductCard'
+import { useExploreStyles } from '@/components/explore/ExploreStyleContext'
+import { SlideTransformConfig, SwiperInteractionState } from '@/components/explore/types'
+import { categoryStyles } from '@/constants/categoryStyles'
+import { ExploreCategoryType } from '@/types/explore'
+import { motionTextVariants } from '@/utils/animations'
+
+interface ExploreProductSliderProps {
+  exploreItem: ExploreCategoryType
+  isInViewContent: boolean
+  swiperInteractions: SwiperInteractionState
+  slideConfig: SlideTransformConfig
+}
+
+const ExploreProductSlider = ({
+  exploreItem,
+  isInViewContent,
+  swiperInteractions,
+  slideConfig
+}: ExploreProductSliderProps) => {
+  const styles = useExploreStyles()
+  const { handleTouchStart, handleTouchEnd } = swiperInteractions
+
+  return (
+    <div className="half__grid-content flex flex-col justify-between w-1/2 h-full max-h-[665px] px-[calc(4%+9.6px)] overflow-hidden">
+      <div className="half__grid-text flex items-end justify-between">
+        <motion.div
+          className="half__grid-title block w-full max-w-[256px]"
+          variants={motionTextVariants.staggerContainer}
+          initial="hidden"
+          animate={isInViewContent ? 'visible' : 'hidden'}
+          transition={{ duration: 1.2, ease: 'linear' }}
+        >
+          <h3 className="masking-text block font-figtree text-start text-[5.21rem] font-[400] leading-[1] tracking-[0] min-h-[52.8px] overflow-hidden">
+            <motion.span
+              className="word inline-block will-change-transform"
+              variants={motionTextVariants.fadeInUp}
+              transition={{ duration: 0.3, delay: 0.3 }}
+            >
+              {exploreItem.title}
+            </motion.span>
+          </h3>
+
+          <h3 className="masking-text block font-sentient text-start text-[5.21rem] italic font-[400] leading-[1] -tracking-[3.5px] min-h-[52.8px] overflow-hidden">
+            <motion.span
+              className="word inline-block will-change-transform"
+              variants={motionTextVariants.fadeInUp}
+              transition={{ duration: 0.3, delay: 0.5 }}
+            >
+              {exploreItem.subtitle}
+            </motion.span>
+          </h3>
+        </motion.div>
+
+        <Link
+          href="/products"
+          className={`${styles.sliderArrow} relative flex flex-row items-center justify-center text-white bg-[#3b3b3b] rounded-full w-[51px] h-[51px] overflow-hidden`}
+          aria-label="Products"
+          data-clone="true"
+        >
+          <ArrowIcon
+            className={`${styles.iconArrow} ${styles.iconArrowFirst} min-w-[12px] min-h-[12px] origin-center`}
+          />
+          <ArrowIcon
+            className={`${styles.iconArrow} ${styles.iconArrowSecond} min-w-[12px] min-h-[12px] origin-center absolute top-1/2 left-1/2`}
+          />
+        </Link>
+      </div>
+
+      <div className="half__grid-product-slider flex items-center w-full h-full">
+        <Swiper
+          id="explore-swiper"
+          className={styles.exploreSwiper}
+          slidesPerView={2}
+          spaceBetween={20}
+          freeMode={true}
+          grabCursor={true}
+          pagination={{
+            clickable: true
+          }}
+          modules={[FreeMode, Pagination]}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          onSliderMove={handleTouchStart}
+          onTransitionEnd={handleTouchEnd}
+        >
+          {exploreItem.products.map((product) => (
+            <SwiperSlide
+              key={product.id}
+              className={styles.exploreSwiperSlide}
+              style={{
+                transform: slideConfig.transform,
+                transition: slideConfig.transition
+              }}
+            >
+              <ProductCard
+                product={product}
+                backgroundColor={categoryStyles[product.category] || 'rgb(241, 204, 207)'}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <p className="text-uppercase max-w-[295px] w-full uppercase font-figtree text-[1.28rem] font-[400] tracking-[0] leading-[1.2] text-[#3b3b3b]">
+        {exploreItem.description}
+      </p>
+    </div>
+  )
+}
+
+export default React.memo(ExploreProductSlider)

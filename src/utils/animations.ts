@@ -1,9 +1,11 @@
-// utils/ (Utilities)	Chứa các hàm thuần (pure functions), tiện ích nhỏ, không có side effects, không gọi API hay tương tác DB. (xây dựng query string).
+/**
+ * Create sequential appearance effects for child elements with the container as the parent,
+ * Control the animation timing and order of child elements via transition.
+ */
 
 import { Variants } from 'motion'
 
 export const motionTextVariants: Record<string, Variants> = {
-  // Tạo hiệu ứng xuất hiện tuần tự cho các phần tử con với container là cha, và điều khiển thời gian và thứ tự animation của các phần tử con qua transition.
   staggerContainer: {
     hidden: { opacity: 0 },
     visible: {
