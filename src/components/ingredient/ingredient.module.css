@@ -1,0 +1,11 @@
+.ingredientsMaskImgWrapper {
+  /* dùng SVG file làm mask */
+  mask-image: url('/ingredients/ingredients-icon-ellipse.svg');
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('/ingredients/ingredients-icon-ellipse.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
