@@ -1,0 +1,10 @@
+build/
+dist/
+next-env.d.ts
+.next/
+node_modules/
+eslint.config.mjs
+next.config.ts
+postcss.config.mjs
+tsconfig.json
+tailwind.config.ts
