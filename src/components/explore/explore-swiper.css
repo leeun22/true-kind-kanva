@@ -1,0 +1,47 @@
+#explore-swiper {
+  display: flex;
+  position: relative;
+  margin-block: 24px;
+  width: 100%;
+  height: fit-content;
+  overflow: visible;
+  z-index: 1;
+  touch-action: pan-y;
+}
+
+#explore-swiper .swiper-pagination {
+  display: flex;
+  gap: 2px;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: fit-content !important;
+  left: 50% !important;
+  top: unset !important;
+  transform: translateX(-50%);
+  flex-direction: row;
+  bottom: -40px !important;
+  border-radius: 50px;
+  padding: 8px 4px 8px 8px;
+}
+
+#explore-swiper .swiper-pagination-bullet {
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  place-content: center;
+  place-items: center;
+  padding: 0;
+  opacity: 0.5;
+}
+
+#explore-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  border-radius: 4px;
+  width: 30px;
+}

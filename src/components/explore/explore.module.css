@@ -1,0 +1,63 @@
+.halfGrid:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+
+.halfGrid:nth-of-type(odd) .exploreSwiper {
+  direction: rtl;
+}
+
+.halfGrid:nth-of-type(odd) .productCard {
+  direction: ltr;
+}
+
+.exploreSwiper {
+  display: flex;
+  padding-block: 26px;
+  overflow: visible;
+}
+
+.exploreSwiperSlide {
+  flex-shrink: 0;
+  height: auto;
+  user-select: none;
+  overflow: hidden;
+}
+
+.sliderArrow:hover {
+  transform: scale(1.1);
+}
+
+.sliderArrow {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.iconArrow {
+  min-width: 12px;
+  min-height: 12px;
+  transform-origin: center;
+  transition:
+    transform 0.8s cubic-bezier(0.18, 0.71, 0.11, 1),
+    opacity 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.iconArrowFirst {
+  transform: translate(0) scaleX(1);
+  opacity: 1;
+}
+
+.iconArrowSecond {
+  transform: translate(-300%, -50%) scaleX(2);
+  opacity: 0;
+}
+
+.sliderArrow:hover .iconArrowFirst {
+  transform: translate(350%, 0) scaleX(2);
+  opacity: 0;
+}
+
+.sliderArrow:hover .iconArrowSecond {
+  transform: translate(-50%, -50%) scaleX(1);
+  opacity: 1;
+}
