@@ -10,6 +10,7 @@ import { SlideTransformConfig, SwiperInteractionState } from '@/components/explo
 import { categoryStyles } from '@/constants/categoryStyles'
 import { ExploreCategoryType } from '@/types/explore'
 import { motionTextVariants } from '@/utils/animations'
+import './explore-swiper.css'
 
 interface ExploreProductSliderProps {
   exploreItem: ExploreCategoryType
@@ -73,7 +74,7 @@ const ExploreProductSlider = ({
         </Link>
       </div>
 
-      <div className="half__grid-product-slider flex items-center w-full h-full">
+      <div className="half__grid-product-slider flex items-start w-full h-full">
         <Swiper
           id="explore-swiper"
           className={styles.exploreSwiper}

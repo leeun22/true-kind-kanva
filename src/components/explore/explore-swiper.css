@@ -1,7 +1,7 @@
 #explore-swiper {
   display: flex;
   position: relative;
-  margin-block: 24px;
+  margin-block: 30px 60px;
   width: 100%;
   height: fit-content;
   overflow: visible;
