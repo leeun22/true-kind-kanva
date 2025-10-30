@@ -1,11 +1,13 @@
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import type { Metadata } from 'next'
 import { figtree, sentient, geistSans, geistMono } from '@/fonts'
+import Header from '@/components/header'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/free-mode'
+import 'swiper/css/thumbs'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -23,7 +25,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${figtree.variable} ${sentient.variable} antialiased`}
       >
-        <NuqsAdapter>{children}</NuqsAdapter>
+        <Header />
+
+        <main>
+          <NuqsAdapter>{children}</NuqsAdapter>
+        </main>
+
+        <footer>Footer</footer>
       </body>
     </html>
   )
