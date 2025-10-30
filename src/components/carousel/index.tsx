@@ -7,16 +7,17 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 
 import { carouselBanners } from '@/constants/carousel'
 import { ImageWithText } from './ImageWithText'
-import './carousel.css'
+import './carousel-swiper.css'
 
 export function Carousel() {
   return (
     <section className="relative flex m-auto w-full h-dvh bg-[#f3e8e7] overflow-hidden">
       <Swiper
+        id="carousel-swiper"
         pagination={{ clickable: true }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="swiper-carousel-container"
       >
         {carouselBanners.map((banner, index) => (
           <SwiperSlide key={index} className="!flex">

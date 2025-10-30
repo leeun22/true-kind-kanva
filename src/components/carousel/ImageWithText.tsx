@@ -23,6 +23,7 @@ export function ImageWithText({
           <Image
             className="block w-full h-full object-[left_center] object-cover"
             alt={alt}
+            priority
             width="3000"
             height="1600"
             sizes="1293px"
