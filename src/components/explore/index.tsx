@@ -4,7 +4,7 @@
 
 import ExploreContainer from './ExploreContainer'
 import { initialExplore } from '@/constants/initialExplore'
-import { getProductsByCategory } from '@/lib/data/productQueries'
+import { getProductsByCategory } from '@/lib/data/productFilter'
 import { ExploreCategoryType, ExploreType } from '@/types/explore'
 
 async function Explore() {

@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { categoryStyles } from '@/constants/categoryStyles'
 import { filters } from '@/constants/filters'
-import { getProductsByParams } from '@/lib/data/productQueries'
+import { getProductsByParams } from '@/lib/data/productFilter'
 
 type ProductPageProps = {
   searchParams: Promise<SearchParams>

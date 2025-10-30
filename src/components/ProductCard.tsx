@@ -24,7 +24,7 @@ const ProductCard = ({ product, backgroundColor }: ProductCardProps) => {
 
   return (
     <Link
-      href={product.handleURL}
+      href={`/products/${product.handleURL}`}
       className={`${styles.productCard} group flex flex-col justify-between relative h-auto p-[18px_12px] rounded-[14px] user-select-none overflow-hidden`}
       aria-label={product.name}
       style={{
@@ -49,7 +49,7 @@ const ProductCard = ({ product, backgroundColor }: ProductCardProps) => {
           <Image
             className="product__card-img w-full h-full object-contain object-center"
             alt={product.name}
-            src={product.images.featureImage}
+            src={`/products/${product.images.featureImage}`}
             decoding="async"
             draggable="false"
             sizes="(max-width: 640px) 320px, (max-width: 768px) 640px, (max-width: 1024px) 768px, (max-width: 1280px) 1024px, (max-width: 1536px) 1280px, 1536px"
@@ -66,7 +66,7 @@ const ProductCard = ({ product, backgroundColor }: ProductCardProps) => {
           <Image
             className="product__card-img w-full h-full object-contain object-center"
             alt={product.name}
-            src={product.images.secondaryImage}
+            src={`/products/${product.images.secondaryImage}`}
             decoding="async"
             draggable="false"
             sizes="(max-width: 640px) 320px, (max-width: 768px) 640px, (max-width: 1024px) 768px, (max-width: 1280px) 1024px, (max-width: 1536px) 1280px, 1536px"
