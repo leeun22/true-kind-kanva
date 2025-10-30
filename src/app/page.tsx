@@ -1,7 +1,7 @@
 import { Carousel } from '@/components/carousel'
 import Connect from '@/components/connect'
 import Explore from '@/components/explore'
-import Header from '@/components/header'
+// import Header from '@/components/header'
 import Ingredient from '@/components/ingredient'
 import Divider from '@/components/ui/Divider'
 import { Spinner } from '@/components/ui/Spinner'
@@ -10,23 +10,17 @@ import { Suspense } from 'react'
 export default async function Home() {
   return (
     <>
-      <Header isHomePage={true} />
+      <Carousel />
 
-      <main>
-        <Carousel />
+      <Ingredient />
 
-        <Ingredient />
+      <Divider />
 
-        <Divider />
+      <Suspense fallback={<Spinner />}>
+        <Explore />
+      </Suspense>
 
-        <Suspense fallback={<Spinner />}>
-          <Explore />
-        </Suspense>
-
-        <Connect />
-      </main>
-
-      {/* <footer></footer> */}
+      <Connect />
     </>
   )
 }
