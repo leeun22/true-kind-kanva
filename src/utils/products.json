@@ -1,206 +1,209 @@
 [
   {
     "id": "1",
-    "name": "Pure Brilliance Serum",
+    "name": "AHA Brightening Exfoliant Cleanser/Face Wash",
     "category": "Pure Brilliance",
-    "type": "Serums",
-    "ingredients": ["Vitamin C", "Hyaluronic Acid", "Niacinamide"],
-    "capacities": [
-      { "capacity": "50ml", "price": 49.99 },
-      { "capacity": "100ml", "price": 79.99 }
+    "type": "Cleansers",
+    "ingredients": ["AHAs", "CICA"],
+    "variants": [
+      { "id": 1, "capacity": "50ml", "price": 14.65 },
+      { "id": 2, "capacity": "100ml", "price": 18.65 },
+      { "id": 3, "capacity": "150ml", "price": 22.65 }
     ],
-    "description": "A powerful brightening serum that combines Vitamin C, Hyaluronic Acid, and Niacinamide.",
+    "description": "Step up your cleansing game with this multi action glow giver that combines a gentle dose of skin care holy grail - Glycolic Acid, along with a mix of potent antioxidants, hydration and restoring agents - Centella asiatica, Turmeric and Licorice.",
     "images": {
-      "featureImage": "/product-images/pure-brilliance-product-1.jpg",
-      "secondaryImage": "/product-images/pure-brilliance-product-1.1.jpg"
+      "featureImage": "pure-brilliance-product-1.jpg",
+      "secondaryImage": "pure-brilliance-product-1.1.jpg"
     },
-    "handleURL": "/pure-brilliance-serum"
+    "handleURL": "aha-brightening-exfoliant-cleanserface-wash",
+    "productType": "featured"
   },
   {
     "id": "2",
-    "name": "Pure Brilliance Serum",
+    "name": "Bio Exfoliant Brightening Sleeping Mask",
     "category": "Pure Brilliance",
-    "type": "Serums",
-    "ingredients": ["Vitamin C", "Hyaluronic Acid", "Niacinamide"],
-    "capacities": [
-      { "capacity": "50ml", "price": 49.99 },
-      { "capacity": "100ml", "price": 79.99 }
+    "type": "Sleeping Mask",
+    "ingredients": ["AHAs", "Hyaluronic Acid", "Niacinamide", "Azelaic Acid", "Pentavitin"],
+    "variants": [
+      { "id": 1, "capacity": "15g", "price": 7.88 },
+      { "id": 2, "capacity": "50g", "price": 14.65 }
     ],
-    "description": "A powerful brightening serum that combines Vitamin C, Hyaluronic Acid, and Niacinamide.",
+    "description": "Step up your cleansing game with this multi action glow giver that combines a gentle dose of skin care holy grail - Glycolic Acid, along with a mix of potent antioxidants, hydration and restoring agents - Centella asiatica, Turmeric and Licorice.",
     "images": {
-      "featureImage": "/product-images/pure-brilliance-product-1.jpg",
-      "secondaryImage": "/product-images/pure-brilliance-product-1.1.jpg"
+      "featureImage": "pure-brilliance-product-2.jpg",
+      "secondaryImage": "pure-brilliance-product-2.1.jpg"
     },
-    "handleURL": "/pure-brilliance-serum"
+    "handleURL": "bio-exfoliant-brightening-sleeping-mask",
+    "productType": "featured"
   },
   {
     "id": "3",
-    "name": "Pure Brilliance Serum",
+    "name": "AHA Brightening Exfoliant Toner/Essence",
     "category": "Pure Brilliance",
-    "type": "Serums",
-    "ingredients": ["Vitamin C", "Hyaluronic Acid", "Niacinamide"],
-    "capacities": [
-      { "capacity": "50ml", "price": 49.99 },
-      { "capacity": "100ml", "price": 79.99 }
+    "type": "Toners",
+    "ingredients": ["AHAs", "Azelaic Acid", "CICA", "Pentavitin"],
+    "variants": [
+      { "id": 1, "capacity": "100ml", "price": 18.65 },
+      { "id": 2, "capacity": "150ml", "price": 22.65 }
     ],
-    "description": "A powerful brightening serum that combines Vitamin C, Hyaluronic Acid, and Niacinamide.",
+    "description": "Step up your cleansing game with this multi action glow giver that combines a gentle dose of skin care holy grail - Glycolic Acid, along with a mix of potent antioxidants, hydration and restoring agents - Centella asiatica, Turmeric and Licorice.",
     "images": {
-      "featureImage": "/product-images/pure-brilliance-product-1.jpg",
-      "secondaryImage": "/product-images/pure-brilliance-product-1.1.jpg"
+      "featureImage": "pure-brilliance-product-3.jpg",
+      "secondaryImage": "pure-brilliance-product-3.1.jpg"
     },
-    "handleURL": "/pure-brilliance-serum"
+    "handleURL": "aha-brightening-exfoliant-toneressence"
   },
   {
     "id": "4",
-    "name": "Pure Brilliance Serum",
-    "category": "Pure Brilliance",
-    "type": "Serums",
-    "ingredients": ["Vitamin C", "Hyaluronic Acid", "Niacinamide"],
-    "capacities": [
-      { "capacity": "50ml", "price": 49.99 },
-      { "capacity": "100ml", "price": 79.99 }
+    "name": "Rosehip & Bakuchiol Skin Perfecting Oil",
+    "category": "Varnaya Blends",
+    "type": "Moisturisers",
+    "ingredients": ["Rosehip", "Phyto Retinol"],
+    "variants": [
+      { "id": 1, "capacity": "30ml", "price": 8.99 },
+      { "id": 2, "capacity": "50ml", "price": 12.99 }
     ],
-    "description": "A powerful brightening serum that combines Vitamin C, Hyaluronic Acid, and Niacinamide.",
+    "description": "Reclaim dry, dull skin with this skin quenching, dream come true water gel featuring Pentavitin (aka hydration's hot new thing), Niacinamide, Pure Saffron, and Precious Herbs prescribed in Ayurveda as a Miraculous Elixir to brighten skin.",
     "images": {
-      "featureImage": "/product-images/pure-brilliance-product-1.jpg",
-      "secondaryImage": "/product-images/pure-brilliance-product-1.1.jpg"
+      "featureImage": "varnaya-blends-product-1.jpg",
+      "secondaryImage": "varnaya-blends-product-1.1.jpg"
     },
-    "handleURL": "/pure-brilliance-serum"
+    "handleURL": "rosehip-bakuchiol-skin-perfecting-oil"
   },
   {
     "id": "5",
-    "name": "Varnaya Hydration Toner",
+    "name": "Manjistha and Saffron Moisture Gel",
     "category": "Varnaya Blends",
-    "type": "Toners",
-    "ingredients": ["Pentavitin", "Hyaluronic Acid", "Peptides"],
-    "capacities": [
-      { "capacity": "100ml", "price": 39.99 },
-      { "capacity": "150ml", "price": 69.99 }
+    "type": "Moisturisers",
+    "ingredients": ["Hyaluronic Acid", "BHAs", "Pentavitin"],
+    "variants": [
+      { "id": 1, "capacity": "15g", "price": 7.99 },
+      { "id": 2, "capacity": "50g", "price": 14.99 }
     ],
-    "description": "A hydrating toner enriched with Green Tea and Peptides complex.",
+    "description": "Reclaim dry, dull skin with this skin quenching, dream come true water gel featuring Pentavitin (aka hydration's hot new thing), Niacinamide, Pure Saffron, and Precious Herbs prescribed in Ayurveda as a Miraculous Elixir to brighten skin.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "varnaya-blends-product-2.jpg",
+      "secondaryImage": "varnaya-blends-product-2.1.jpg"
     },
-    "handleURL": "/varnaya-hydration-toner"
+    "handleURL": "manjistha-and-saffron-moisture-gel",
+    "productType": "featured"
   },
   {
     "id": "6",
-    "name": "Varnaya Hydration Toner",
+    "name": "Acne Calming Herb Rescue Mask",
     "category": "Varnaya Blends",
-    "type": "Toners",
-    "ingredients": ["Pentavitin", "Hyaluronic Acid", "Peptides"],
-    "capacities": [
-      { "capacity": "100ml", "price": 39.99 },
-      { "capacity": "150ml", "price": 69.99 }
+    "type": "Sleeping Mask",
+    "ingredients": ["Hyaluronic Acid", "BHAs"],
+    "variants": [
+      { "id": 1, "capacity": "15g", "price": 7.88 },
+      { "id": 2, "capacity": "50g", "price": 14.88 }
     ],
-    "description": "A hydrating toner enriched with Green Tea and Peptides complex.",
+    "description": "Purify, calm and restore balance to problematic, acne prone oily skin with this lightweight hydrating jelly mask that features patented sebum regulator Sepicontrol A5 combined with a potent mix of healing herbs from Ayurveda including Turmeric, Lodhra, Black Mustard, Nutgrass, Neem and Nutmeg.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "varnaya-blends-product-3.jpg",
+      "secondaryImage": "varnaya-blends-product-3.1.jpg"
     },
-    "handleURL": "/varnaya-hydration-toner"
+    "handleURL": "acne-calming-herb-rescue-mask",
+    "productType": "featured"
   },
   {
     "id": "7",
-    "name": "Varnaya Hydration Toner",
+    "name": "Kumkumadi Radiance Facial Oil",
     "category": "Varnaya Blends",
-    "type": "Toners",
-    "ingredients": ["Pentavitin", "Hyaluronic Acid", "Peptides"],
-    "capacities": [
-      { "capacity": "100ml", "price": 39.99 },
-      { "capacity": "150ml", "price": 69.99 }
+    "type": "Facial Oils",
+    "ingredients": ["Rosehip", "Phyto Retinol"],
+    "variants": [
+      { "id": 1, "capacity": "30ml", "price": 8.99 },
+      { "id": 2, "capacity": "50ml", "price": 12.99 }
     ],
-    "description": "A hydrating toner enriched with Green Tea and Peptides complex.",
+    "description": "Wake up to a refreshed, hydrated, radiant glow! Prescribed in Ayurveda as a 'Miraculous Elixir', Kumkumadi is a revered blend that contains Saffron and over 20 precious Ayurvedic herbs and oils that are a rich source of antioxidants and replenishing emollients.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "varnaya-blends-product-4.jpg",
+      "secondaryImage": "varnaya-blends-product-4.1.jpg"
     },
-    "handleURL": "/varnaya-hydration-toner"
+    "handleURL": "kumkumadi-radiance-facial-oil"
   },
   {
     "id": "8",
-    "name": "Varnaya Hydration Toner",
-    "category": "Varnaya Blends",
-    "type": "Toners",
-    "ingredients": ["Pentavitin", "Hyaluronic Acid", "Peptides"],
-    "capacities": [
-      { "capacity": "100ml", "price": 39.99 },
-      { "capacity": "150ml", "price": 69.99 }
+    "name": "Pomegranate and Mint Hydrating Tonic",
+    "category": "Daily Dew",
+    "type": "Tonics",
+    "ingredients": ["Pentavitin"],
+    "variants": [
+      { "id": 1, "capacity": "100ml", "price": 18.65 },
+      { "id": 2, "capacity": "150ml", "price": 22.65 }
     ],
-    "description": "A hydrating toner enriched with Green Tea and Peptides complex.",
+    "description": "Revive and renew with this ultra-hydrating, gentle melting eye cream that features a unique multi-functional ingredient blend including Bakuchi Oil, Tri Peptides, Niacinamide and Ashwagandha for complete care for your most fragile skin.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "daily-dew-product-1.jpg",
+      "secondaryImage": "daily-dew-product-1.1.jpg"
     },
-    "handleURL": "/varnaya-hydration-toner"
+    "handleURL": "pomegranate-and-mint-hydrating-tonic",
+    "productType": "featured"
   },
   {
     "id": "9",
-    "name": "Varnaya Hydration Toner",
-    "category": "Varnaya Blends",
-    "type": "Toners",
-    "ingredients": ["Pentavitin", "Hyaluronic Acid", "Peptides"],
-    "capacities": [
-      { "capacity": "100ml", "price": 39.99 },
-      { "capacity": "150ml", "price": 69.99 }
-    ],
-    "description": "A hydrating toner enriched with Green Tea and Peptides complex.",
+    "name": "Phyto-Retinol & Peptide Eye Cream",
+    "category": "Daily Dew",
+    "type": "Moisturisers",
+    "ingredients": ["Hyaluronic Acid", "Niacinamide"],
+    "variants": [{ "id": 1, "capacity": "15g", "price": 14.99 }],
+    "description": "Revive and renew with this ultra-hydrating, gentle melting eye cream that features a unique multi-functional ingredient blend including Bakuchi Oil, Tri Peptides, Niacinamide and Ashwagandha for complete care for your most fragile skin.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "daily-dew-product-2.jpg",
+      "secondaryImage": "daily-dew-product-2.1.jpg"
     },
-    "handleURL": "/varnaya-hydration-toner"
+    "handleURL": "phyto-retinol-peptide-eye-cream",
+    "productType": "featured"
   },
   {
     "id": "10",
-    "name": "Daily Dew Moisturizer",
+    "name": "Hyaluronic & Squalane Water Crème",
     "category": "Daily Dew",
     "type": "Moisturisers",
-    "ingredients": ["Ceramides", "Azelaic Acid", "Vitamin C"],
-    "capacities": [
-      { "capacity": "50ml", "price": 54.99 },
-      { "capacity": "100ml", "price": 89.99 }
-    ],
-    "description": "A lightweight yet deeply moisturizing cream for daily use.",
+    "ingredients": ["Hyaluronic Acid", "Pentavitin", "Squalane"],
+    "variants": [{ "id": 1, "capacity": "50g", "price": 20.99 }],
+    "description": "Get that plump, dewy look with this weightless, oil free formula infused with the ultra-hydrating trio - Hyaluronic, Squalane and Pentavitin combined with Lychee and Watermelon extracts to quench and revive thirsty dull skin.",
     "images": {
-      "featureImage": "/product-images/pure-brilliance-product-1.jpg",
-      "secondaryImage": "/product-images/pure-brilliance-product-1.1.jpg"
+      "featureImage": "daily-dew-product-3.jpg",
+      "secondaryImage": "daily-dew-product-3.1.jpg"
     },
-    "handleURL": "/daily-dew-moisturizer"
+    "handleURL": "hyaluronic-squalane-water-creme"
   },
   {
     "id": "11",
-    "name": "Clear Difference Cleanser",
+    "name": "BHA & Tea Tree Acne Clearing Toner/Essence",
     "category": "Clear Difference",
-    "type": "Cleansers",
-    "ingredients": ["AHA/BHA", "Niacinamide", "Pentavitin"],
-    "capacities": [
-      { "capacity": "150ml", "price": 34.99 },
-      { "capacity": "250ml", "price": 59.99 }
+    "type": "Toners",
+    "ingredients": ["Azelaic Acid", "BHAs"],
+    "variants": [
+      { "id": 1, "capacity": "100ml", "price": 20.88 },
+      { "id": 2, "capacity": "150ml", "price": 24.88 }
     ],
-    "description": "A gentle yet effective cleanser with AHA/BHA for clear skin.",
+    "description": "Take the fight against acne to the next level with this exfoliating Toner/ Essense/Serum featuring a potent, heavy-hitting blend of ingredients including 2% Salicylic Acid, Azelaic Acid, Tea Tree and a powerful Adaptogenic Anti Acne Herb Blend that will help reducing breakouts, blackouts and in promoting a more even looking complexion.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "clear-difference-product-1.jpg",
+      "secondaryImage": "clear-difference-product-1.1.jpg"
     },
-    "handleURL": "/clear-difference-cleanser"
+    "handleURL": "bha-tea-tree-acne-clearing-toneressence",
+    "productType": "featured"
   },
   {
     "id": "12",
-    "name": "C Luminance Night Mask",
+    "name": "Vitamin C 15% Brightening Serum",
     "category": "C Luminance",
-    "type": "Sleeping Mask",
-    "ingredients": ["Vitamin C", "Hyaluronic Acid", "Pentavitin"],
-    "capacities": [
-      { "capacity": "50ml", "price": 64.99 },
-      { "capacity": "100ml", "price": 99.99 }
+    "type": "Serums",
+    "ingredients": ["AHAs", "Hyaluronic Acid", "Niacinamide", "Vitamin C"],
+    "variants": [
+      { "id": 1, "capacity": "30ml", "price": 8.99 },
+      { "id": 2, "capacity": "50ml", "price": 12.99 }
     ],
-    "description": "An overnight treatment mask with Vitamin C and Retinol.",
+    "description": "Your Glow-Up in a bottle. This skin elixir is a brilliant cocktail of brightening & revitalizing ingredients, Combining a potent dose of direct-acting Vitamin C (Ethyl Ascorbic Acid) with Niacinamide, Hyaluronic Acid, and Natural AHAs.",
     "images": {
-      "featureImage": "/product-images/varnaya-blends-product-1.jpg",
-      "secondaryImage": "/product-images/varnaya-blends-product-1.1.jpg"
+      "featureImage": "c-luminance-product-1.jpg",
+      "secondaryImage": "c-luminance-product-1.1.jpg"
     },
-    "handleURL": "/c-luminance-night-mask"
+    "handleURL": "vitamin-c-15-brightening-serum",
+    "productType": "featured"
   }
 ]
