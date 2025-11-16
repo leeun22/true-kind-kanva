@@ -8,7 +8,7 @@ export const initialExplore: ExploreType[] = [
     description: 'Stay glowing and healthy without having to think about it.',
     banner: '/explores/explore-parallax-1.jpg',
     category: 'Pure Brilliance',
-    link: '/products/'
+    link: '/collections'
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export const initialExplore: ExploreType[] = [
     description: 'Stay glowing and healthy without having to think about it.',
     banner: '/explores/explore-parallax-2.jpg',
     category: 'Varnaya Blends',
-    link: '/products/'
+    link: '/collections'
   }
 ]
