@@ -3,7 +3,7 @@
  * Control the animation timing and order of child elements via transition.
  */
 
-import { Variants } from 'motion'
+import type { Variants } from 'motion/react'
 
 export const motionTextVariants: Record<string, Variants> = {
   staggerContainer: {
