@@ -21,7 +21,6 @@ export default function Carousel() {
         id="carousel-swiper"
         className="swiper-carousel-container"
         pagination={{ clickable: true }}
-        grabCursor={true}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onSlideChange={handleSlideChange} // Update activeIndex when user drag/clicks
