@@ -2,15 +2,16 @@ import CloseIcon from '@/assets/close-icon'
 import React from 'react'
 
 interface CloseButtonProps {
+  className?: string
   iconWidth: number
   iconHeight: number
   onClose: () => void
 }
 
-const CloseButton = ({ iconWidth, iconHeight, onClose }: CloseButtonProps) => {
+const CloseButton = ({ className, iconWidth, iconHeight, onClose }: CloseButtonProps) => {
   return (
     <button
-      className="text-[#3b3b3b] hover:rotate-180 transition-transform duration-500 cursor-pointer"
+      className={`text-[#3b3b3b] hover:rotate-180 transition-transform duration-500 cursor-pointer ${className}`}
       aria-label="Close button"
       onClick={onClose}
     >
