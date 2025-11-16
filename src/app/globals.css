@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@config "../../tailwind.config.ts";
 
 :root {
   --background: #ffffff;
@@ -49,10 +50,22 @@ a[href] {
   text-decoration: none;
 }
 
-.font-sentient {
+@utility font-sentient {
   font-family: var(--font-sentient);
+  font-weight: 400;
+  color: #3b3b3b;
+  letter-spacing: -3px;
 }
 
-.font-figtree {
+@utility font-figtree {
   font-family: var(--font-figtree);
+  font-weight: 400;
+  color: #3b3b3b;
+}
+
+@utility max-w-container {
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-inline: 8px;
 }
