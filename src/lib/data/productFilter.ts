@@ -4,7 +4,7 @@
  * @param categoriesSorted - The categories are sorted.
  * @param typesSorted - The types string has been sorted.
  * @param ingredientsSorted - The ingredients string has been sorted.
- * @param capacitiesSorted - The capacities have been arranged.
+ * @param variantsSorted - The variants have been arranged.
  * @param limit - Limit the results.
  */
 
@@ -61,8 +61,8 @@ const getProductsFiltered = unstable_cache(
           return false
         }
 
-        // Capacities (OR)
-        if (params.capacities.length > 0 && !prod.capacities.some((s) => params.capacities.includes(s.capacity))) {
+        // capacities (OR)
+        if (params.capacities.length > 0 && !prod.variants.some((s) => params.capacities.includes(s.capacity))) {
           return false
         }
 

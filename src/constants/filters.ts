@@ -1,4 +1,5 @@
-import type { CategoryType, ProductType } from '@/types/product'
+import { FilterType } from '@/types/filter'
+import type { CategoryType, IngredientType, ProductType } from '@/types/product'
 
 export const CATEGORIES: CategoryType[] = [
   'Pure Brilliance',
@@ -18,11 +19,23 @@ export const PRODUCT_TYPES: ProductType[] = [
   'Facial Oils'
 ]
 
-export const INGREDIENTS = ['AHA/BHA', 'Hyaluronic Acid', 'Niacinamide', 'Vitamin C', 'Pentavitin', 'Azelaic Acid']
+export const INGREDIENTS: IngredientType[] = [
+  'AHAs',
+  'Hyaluronic Acid',
+  'Niacinamide',
+  'Vitamin C',
+  'Azelaic Acid',
+  'BHAs',
+  'CICA',
+  'Pentavitin',
+  'Rosehip',
+  'Phyto Retinol',
+  'Squalane'
+]
 
-export const CAPACITIES = ['50ml', '100ml', '150ml', '250ml']
+export const CAPACITIES = ['30ml', '50ml', '100ml', '150ml', '15g', '50g']
 
-export const filters = [
+export const filters: FilterType[] = [
   {
     id: 1,
     name: 'Category',
@@ -43,7 +56,7 @@ export const filters = [
   },
   {
     id: 4,
-    name: 'Capacities',
+    name: 'Capacity',
     key: 'capacities' as const,
     options: CAPACITIES
   }
