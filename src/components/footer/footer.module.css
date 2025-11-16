@@ -1,0 +1,48 @@
+.footerLink:before {
+  content: '';
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.3s;
+}
+
+.footerLink:before {
+  background: #3b3b3b;
+  height: 1px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+.footerLink.active:before,
+.footerLink:hover:before {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.footerBtnSubmit .arrowLongIcon {
+  transform-origin: center;
+  transition:
+    transform 0.8s cubic-bezier(0.18, 0.71, 0.11, 1),
+    opacity 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.footerBtnSubmit .arrowLongIcon:first-child {
+  transform: translateX(0) scaleX(1);
+}
+
+.footerBtnSubmit:hover .arrowLongIcon:first-child {
+  opacity: 0;
+  transform: translate(200%, -200%);
+}
+
+.footerBtnSubmit .arrowLongIcon:last-child {
+  opacity: 0;
+  transform: translate(-290%, 220%);
+}
+
+.footerBtnSubmit:hover .arrowLongIcon:last-child {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}

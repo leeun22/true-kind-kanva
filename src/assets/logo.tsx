@@ -1,6 +1,6 @@
-'use client'
+import React from 'react'
 
-export default function Logo({ className }: { className?: string }) {
+const Logo = ({ className }: { className?: string }) => {
   return (
     <svg
       className={className}
@@ -53,3 +53,5 @@ export default function Logo({ className }: { className?: string }) {
     </svg>
   )
 }
+
+export default React.memo(Logo)
