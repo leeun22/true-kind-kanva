@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import clsx from 'clsx'
+import { toast } from 'sonner'
 import CartIcon from '@/assets/cart-icon'
 import Logo from '@/assets/logo'
 import SearchIcon from '@/assets/search-icon'
@@ -14,6 +15,8 @@ import NavbarMenuSocial from './NavbarMenuSocial'
 import { useCallback, useState } from 'react'
 import { useIsTablet } from '@/hooks/useIsTablet'
 import { useScrollLock } from '@/hooks/useScrollLock'
+import InfoIcon from '@/assets/info-icon'
+import CloseButton from '../ui/CloseButton'
 
 interface HeaderProps {
   isStylesHome?: boolean
@@ -44,6 +47,23 @@ export default function Header({ isStylesHome }: HeaderProps) {
   const handleToggleMenu = useCallback(() => {
     setIsOpenMenu(!isOpenMenu)
   }, [isOpenMenu])
+
+  const handleSearch = () => {
+    toast.info('Coming Soon', {
+      className: 'toast__coming-soon font-figtree text-[1.4rem] text-[#fff]',
+      position: 'top-center',
+      icon: <InfoIcon className="w-[16px] h-[16px]" />,
+      style: {
+        background: '#000000e6',
+        color: '#fff',
+        borderColor: '#929292'
+      },
+      duration: 1500,
+      cancel: (
+        <CloseButton className="text-white ml-auto" iconWidth={16} iconHeight={16} onClose={() => toast.dismiss()} />
+      )
+    })
+  }
 
   return (
     <header
@@ -138,6 +158,7 @@ export default function Header({ isStylesHome }: HeaderProps) {
                   id="search-nav"
                   className="navbar-cta-list-item-btn-search cursor-pointer group-hover:scale-[1.05] duration-300 transition-transform"
                   aria-label="Search"
+                  onClick={handleSearch}
                 >
                   <SearchIcon
                     className={`block min-w-[18px] min-h-[18px] ${isStylesHome ? (isScrolled ? 'text-white' : 'text-[#3b3b3b]') : 'text-white'}`}
