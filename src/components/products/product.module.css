@@ -1,0 +1,44 @@
+/* Ẩn các mũi tên (spinners) mặc định trong Chrome, Safari, Edge, Opera; Firefox */
+.quantityInputField {
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+
+/* Trong một số phiên bản Edge/IE */
+.quantityInputField::-webkit-inner-spin-button,
+.quantityInputField::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.addToCartBtnIconArrow {
+  transform: translate(-25%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.addToCartBtn[data-disabled='false']:hover .addToCartBtnIconArrow {
+  transform: translate(-25%, -50%) scale(1.1);
+}
+
+.addToCartBtnIcon {
+  transition:
+    transform 0.8s cubic-bezier(0.18, 0.71, 0.11, 1),
+    opacity 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.addToCartBtn .addToCartBtnIcon:first-child {
+  transform: translate(-50%, -50%);
+}
+
+.addToCartBtn .addToCartBtnIcon:last-child {
+  transform: translateY(300%);
+}
+
+.addToCartBtn[data-disabled='false']:hover .addToCartBtnIcon:first-child {
+  transform: translate(-50%, -300%);
+}
+
+.addToCartBtn[data-disabled='false']:hover .addToCartBtnIcon:last-child {
+  transform: translateY(0);
+}
