@@ -4,7 +4,15 @@ import ProductZeroToxics from '@/components/products/ProductZeroToxics'
 import FeaturedProduct from '@/components/featured/FeaturedProduct'
 import Divider from '@/components/ui/Divider'
 import { notFound } from 'next/navigation'
-import { getProductByHandleURL, getProductCoreData } from '@/lib/data/productByHandle'
+import { getAllProductHandles, getProductByHandleURL, getProductCoreData } from '@/lib/data/productByHandle'
+
+export async function generateStaticParams() {
+  const productHandles = await getAllProductHandles()
+
+  return productHandles.map((handle) => ({
+    productHandle: handle
+  }))
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ productHandle: string }> }): Promise<Metadata> {
   const { productHandle } = await params
@@ -16,16 +24,9 @@ export async function generateMetadata({ params }: { params: Promise<{ productHa
   return {
     title: product.name,
     description: product.description,
-    // Main product url: Avoid duplicate content.
     alternates: {
       canonical: `/products/${productHandle}`
-    }
-    // openGraph: {
-    //   title: product.name,
-    //   description: product.description,
-    //   images: [product.images.featureImage],
-    //   url: `/products/${productHandle}`
-    // }
+    } // Main product url: Avoid duplicate content.
   }
 }
 

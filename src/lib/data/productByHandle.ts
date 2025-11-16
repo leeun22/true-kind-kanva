@@ -89,3 +89,31 @@ export const getProductCoreData = async (handleURL: string): Promise<ProductCore
 
   return coreData
 }
+
+/**
+ * Public function 3: Get all available product handle URLs.
+ * This is primarily used by generateStaticParams in dynamic routes.
+ */
+export const getAllProductHandles = unstable_cache(
+  async (): Promise<string[]> => {
+    try {
+      const allProducts = await fetchAllProducts()
+
+      if (allProducts.length === 0) {
+        console.warn('fetchAllProducts returned an empty array while getting handles.')
+        return []
+      }
+
+      const handles = allProducts.map((prod) => prod.handleURL)
+
+      return handles
+    } catch (error) {
+      console.error('Error fetching all product handles:', error)
+      return []
+    }
+  },
+  ['all-product-handles'],
+  {
+    tags: ['product-handles']
+  }
+)
