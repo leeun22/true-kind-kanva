@@ -1,26 +1,25 @@
-import { Carousel } from '@/components/carousel'
+import Carousel from '@/components/carousel'
 import Connect from '@/components/connect'
 import Explore from '@/components/explore'
-// import Header from '@/components/header'
 import Ingredient from '@/components/ingredient'
 import Divider from '@/components/ui/Divider'
-import { Spinner } from '@/components/ui/Spinner'
-import { Suspense } from 'react'
+// import { Spinner } from '@/components/ui/Spinner'
+// import { Suspense } from 'react'
 
-export default async function Home() {
+export default function Home() {
   return (
-    <>
+    <main>
       <Carousel />
 
       <Ingredient />
 
       <Divider />
 
-      <Suspense fallback={<Spinner />}>
-        <Explore />
-      </Suspense>
+      {/* <Suspense fallback={<Spinner />}> */}
+      <Explore />
+      {/* </Suspense> */}
 
       <Connect />
-    </>
+    </main>
   )
 }
