@@ -9,3 +9,12 @@
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
 }
+
+@media (max-width: 767px) {
+  .ingredientsFirstCol {
+    transform: none !important;
+  }
+  .ingredientsItem {
+    margin: unset !important;
+  }
+}
