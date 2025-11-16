@@ -8,6 +8,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { figtree, sentient, geistSans, geistMono } from '@/fonts'
+import { Toaster } from 'sonner'
 import ReduxProvider from './redux-provider'
 import Header from '@/components/header'
 import CartPopup from '@/components/cart/CartPopup'
@@ -47,6 +48,8 @@ export default function RootLayout({
 
           <CartPopup />
         </ReduxProvider>
+
+        <Toaster />
       </body>
     </html>
   )
