@@ -17,12 +17,18 @@ export default function ExploreContainer({ exploreData }: { exploreData: Explore
 
   return (
     <ExploreStyleProvider>
-      <section ref={refSection} id="explore" className="explore__section block mt-[102px]">
-        <ExploreTitle isInViewSection={isInViewSection} />
+      <section
+        ref={refSection}
+        id="explore"
+        className="explore__section block md:mt-[102px] min-[490px]:mt-[80px] mt-[62px]"
+      >
+        <div className="explore__container max-[768px]:max-w-container">
+          <ExploreTitle isInViewSection={isInViewSection} />
 
-        {exploreData.map((exploreItem, index) => (
-          <ExploreContent key={exploreItem.id} index={index} exploreItem={exploreItem} />
-        ))}
+          {exploreData.map((exploreItem, index) => (
+            <ExploreContent key={exploreItem.id} index={index} exploreItem={exploreItem} />
+          ))}
+        </div>
       </section>
     </ExploreStyleProvider>
   )

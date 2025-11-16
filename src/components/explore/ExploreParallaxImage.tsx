@@ -10,7 +10,7 @@ interface ExploreParallaxImageProps {
 
 const ExploreParallaxImage = ({ exploreItem, exploreBannerTransform }: ExploreParallaxImageProps) => {
   return (
-    <div className="half__grid-img parallax w-1/2 h-full overflow-hidden">
+    <div className="half__grid-img parallax w-1/2 h-full overflow-hidden max-[768px]:hidden">
       <motion.div
         className="parallax-image relative w-full h-[110%] object-cover user-select-none"
         style={{

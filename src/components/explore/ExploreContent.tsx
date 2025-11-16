@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import React from 'react'
 import { useExploreAnimations } from './hooks/useExploreAnimations'
-import { useSwiperInteractions } from './hooks/useSwiperInteractions'
+import { useSwiperInteractions } from '@/hooks/useSwiperInteractions'
 import ExploreParallaxImage from './ExploreParallaxImage'
 import ExploreProductSlider from './ExploreProductSlider'
 import { useExploreStyles } from './ExploreStyleContext'
@@ -15,22 +15,22 @@ interface ExploreContentProps {
 const ExploreContent = ({ index, exploreItem }: ExploreContentProps) => {
   const styles = useExploreStyles()
 
-  const { refContent, isInViewContent, isViewSliderTransform, exploreBannerTransform } = useExploreAnimations(index)
+  const { refTarget, isViewTarget, isSliderTransform, exploreBannerTransform } = useExploreAnimations(index)
 
-  const swiperInteractions = useSwiperInteractions(isViewSliderTransform)
+  const swiperInteractions = useSwiperInteractions(isSliderTransform)
   const { getSlideTransformConfig } = swiperInteractions
   const slideConfig = React.useMemo(() => getSlideTransformConfig(), [getSlideTransformConfig])
 
   return (
     <motion.div
-      ref={refContent}
-      className={`${styles.halfGrid} flex flex-row items-center justify-between w-full min-h-[832px] h-[120vh] overflow-hidden`}
+      ref={refTarget}
+      className={`${styles.halfGrid} flex flex-row items-center justify-between w-full md:min-h-[832px] md:h-[120vh] max-[768px]:mb-[50px] overflow-hidden`}
     >
       <ExploreParallaxImage exploreItem={exploreItem} exploreBannerTransform={exploreBannerTransform} />
 
       <ExploreProductSlider
         exploreItem={exploreItem}
-        isInViewContent={isInViewContent}
+        isViewTarget={isViewTarget}
         swiperInteractions={swiperInteractions}
         slideConfig={slideConfig}
       />
