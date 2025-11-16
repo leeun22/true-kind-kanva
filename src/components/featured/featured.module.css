@@ -1,0 +1,7 @@
+.featuredProductSwiperSlide {
+  flex-shrink: 0;
+  height: auto;
+  max-width: 330px;
+  user-select: none;
+  overflow: hidden;
+}
