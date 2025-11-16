@@ -1,14 +1,14 @@
 export const initialMenu: { label: string; handle: string }[] = [
   {
     label: 'SHOP',
-    handle: '/products'
+    handle: '/collections'
   },
   {
     label: 'ABOUT',
-    handle: '/about'
+    handle: '/#about'
   },
   {
     label: 'JOURNAL',
-    handle: '/journal'
+    handle: '/#journal'
   }
 ]
