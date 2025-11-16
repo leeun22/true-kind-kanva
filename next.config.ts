@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+
   images: {
     remotePatterns: [
       {
@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+   experimental: {
+    globalNotFound: true,
+  },
+  // reactStrictMode: false
 };
 
 export default nextConfig;
