@@ -8,7 +8,7 @@ import styles from './footer.module.css'
 import ModalDialog from '../dialog/ModalDialog'
 
 export const SubscribeButton = ({ label }: { label: string }) => {
-  // Đặt tên lại cho các biến cục bộ theo cú pháp: originalName: newName
+  // Rename local variables using the syntax: originalName: newName
   const {
     isOpen: isSubscribeOpen,
     openDialog: handleSubscribeOpen,
