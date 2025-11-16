@@ -42,7 +42,7 @@ export const useDialogController = ({ dialogRef, isOpenDialog, closeDialog }: Us
 
       return () => clearTimeout(timer)
     }
-  }, [isOpenDialog])
+  }, [isOpenDialog, dialogRef])
 
   /** Handle backdrop click (click outside sidebar) */
   useEffect(() => {
@@ -57,7 +57,7 @@ export const useDialogController = ({ dialogRef, isOpenDialog, closeDialog }: Us
 
     dialog.addEventListener('click', handleClickBackdrop)
     return () => dialog.removeEventListener('click', handleClickBackdrop)
-  }, [closeDialog])
+  }, [closeDialog, dialogRef])
 
   /** ESC key handling */
   useEffect(() => {
