@@ -1,0 +1,30 @@
+.dialogContainer::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.dialogContainer[data-state='open']::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialogContainer[data-state='closing']::backdrop {
+  background: rgba(0, 0, 0, 0);
+}
+
+.dialogContent {
+  transform: scale(0);
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.18, 0.71, 0.11, 1),
+    opacity 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.dialogContainer[data-state='open'] .dialogContent {
+  transform: scale(100%);
+  opacity: 1;
+}
+
+.dialogContainer[data-state='closing'] .dialogContent {
+  transform: scale(0);
+  opacity: 0;
+}
