@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 import containerQueries from "@tailwindcss/container-queries";
 
-
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
