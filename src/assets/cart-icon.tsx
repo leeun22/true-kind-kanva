@@ -1,7 +1,10 @@
-export default function CartIcon({ className }: { className?: string }) {
+import React from 'react'
+
+const CartIcon = ({ className, style }: { className?: string; style?: React.CSSProperties }) => {
   return (
     <svg
       className={className}
+      style={style}
       width={15}
       height={18}
       viewBox="0 0 15 18"
@@ -22,3 +25,5 @@ export default function CartIcon({ className }: { className?: string }) {
     </svg>
   )
 }
+
+export default React.memo(CartIcon)
