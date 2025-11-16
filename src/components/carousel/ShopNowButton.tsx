@@ -1,12 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import { memo } from 'react'
 
-export function ShopNowButton() {
+const ShopNowButton = () => {
   return (
     <Link
       className="group relative flex flex-col justify-start pb-[2px] underline-offset-0 outline-none overflow-hidden"
-      href={`/products`}
+      aria-label="Shop Now"
+      href={`/collections`}
     >
       <p className="ButtonText font-figtree text-[1.5rem] font-normal leading-[100%] tracking-[-0.5px] text-white">
         Shop Now
@@ -15,3 +17,4 @@ export function ShopNowButton() {
     </Link>
   )
 }
+export default memo(ShopNowButton)

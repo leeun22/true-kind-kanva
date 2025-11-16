@@ -50,6 +50,8 @@
 
 #carousel-swiper .swiper-button-prev,
 #carousel-swiper .swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
   display: block;
   place-content: center;
   place-items: center;
@@ -63,7 +65,6 @@
   cursor: pointer;
   opacity: 1;
   pointer-events: auto;
-  transform: none;
   will-change: transform;
 }
 
@@ -73,4 +74,11 @@
 
 #carousel-swiper .swiper-button-next {
   right: 48px !important;
+}
+
+@media screen and (max-width: 768px) {
+  #carousel-swiper .swiper-button-prev,
+  #carousel-swiper .swiper-button-next {
+    display: none;
+  }
 }
