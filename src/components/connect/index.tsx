@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView, useScroll, useTransform } from 'motion/react'
 import { motionTextVariants } from '@/utils/animations'
-import InstagramIcon from '@/assets/instagram-icon'
+import { InstagramIcon } from '@/assets/instagram-icon'
 
 export default function Connect() {
   const ref = useRef(null)
@@ -26,10 +26,14 @@ export default function Connect() {
   const connectImageTransform2 = useTransform(scrollYProgress, [0, 1], [createTransformY(66), createTransformY(40)])
 
   return (
-    <section ref={ref} id="connect" className="block relative my-[102px] mb-0 mt-[15%] pb-[256px]">
-      <div className="container relative max-w-[1400px] w-full m-auto px-[calc(8px*.5)]">
-        <div className="row flex flex-wrap m-0">
-          <div className="col flex flex-col justify-between flex-shrink-0 flex-grow-0 basis-auto w-[16%] max-w-full">
+    <section
+      ref={ref}
+      id="connect"
+      className="connect__section block relative md:my-[200px] md:pb-[140px] min-[490px]:my-[160px] min-[490px]:pb-[120px] my-[110px] pb-[160px]"
+    >
+      <div className="connect__container relative max-w-container">
+        <div className="connect__row flex sm:flex-row flex-col m-auto">
+          <div className="connect__col sm:flex hidden flex-col justify-between flex-shrink-0 flex-grow-0 basis-auto w-[16%] max-w-full">
             <motion.div
               className="media-img relative w-full select-none"
               style={{
@@ -54,21 +58,21 @@ export default function Connect() {
             </p>
           </div>
 
-          <div className="col relative px-[38px] w-[66%] max-w-full">
+          <div className="connect__col relative min-[490px]:px-[38px] px-0 sm:w-[66%] w-full max-w-full">
             <motion.div
-              className="connect__title block m-auto absolute top-[-81px] left-1/2 -translate-x-1/2 text-center"
+              className="connect__title block m-auto absolute sm:-top-[81px] -top-[50px] left-1/2 -translate-x-1/2 text-center"
               variants={motionTextVariants.staggerContainer}
               initial="hidden"
               animate={isInViewSection ? 'visible' : 'hidden'}
               transition={{ duration: 1.2, ease: 'linear' }}
             >
-              <h2 className="masking-text block font-figtree text-center text-[5.9rem] text-[#3b3b3b] font-[500] leading-[1] -tracking-[1px] uppercase h-[59px] overflow-hidden">
+              <h2 className="masking-text block font-figtree text-center text-fluid8xl font-[600] -tracking-[1px] uppercase overflow-hidden">
                 <motion.span className="word inline-block will-change-transform" variants={motionTextVariants.fadeInUp}>
                   CONNECT
                 </motion.span>
               </h2>
 
-              <h2 className="masking-text block font-figtree text-center text-[5.9rem] text-[#3b3b3b] font-[500] leading-[1] -tracking-[1px] uppercase h-[59px] overflow-hidden">
+              <h2 className="masking-text block font-figtree text-center text-fluid8xl font-[600] leading-[1] -tracking-[1px] uppercase overflow-hidden">
                 <motion.span className="word inline-block will-change-transform" variants={motionTextVariants.fadeInUp}>
                   WITH US
                 </motion.span>
@@ -76,7 +80,7 @@ export default function Connect() {
             </motion.div>
 
             <div className="connect__image relative w-full h-full object-center object-cover z-[-1]">
-              <div className="media-img-desktop block relative w-full user-none">
+              <div className="media-img-desktop sm:block hidden relative w-full user-none">
                 <Image
                   className="w-full h-full object-cover"
                   alt="Connect 2"
@@ -89,7 +93,7 @@ export default function Connect() {
                 />
               </div>
 
-              <div className="media-img-mobile hidden relative w-full user-select-none">
+              <div className="media-img-mobile sm:hidden block relative w-full user-select-none">
                 <Image
                   className="w-full h-full object-cover"
                   alt="Connect 2"
@@ -103,12 +107,12 @@ export default function Connect() {
               </div>
             </div>
 
-            <h2 className="connect__subtitle absolute -bottom-[78px] left-1/2 -translate-x-1/2 text-center font-sentient text-[8.2rem] font-[400] italic leading-[.65] -tracking-[5px]">
+            <h2 className="connect__subtitle absolute sm:-bottom-[78px] bottom-[12px] left-1/2 -translate-x-1/2 text-center font-sentient text-fluid6xl italic leading-[.65] -tracking-[5px]">
               {' '}
               on <br /> instagram{' '}
             </h2>
 
-            <div className="connect__socmed w-full max-w-[262px] absolute -bottom-[223px] left-1/2 -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition-transform duration-200">
+            <div className="connect__socmed w-full max-w-[262px] absolute sm:-bottom-[223px] -bottom-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition-transform duration-200">
               <Link
                 className="block--icon-global flex items-center text-center rounded-[65px] w-full px-[6.5px] py-[8.5px] border-[1px] border-solid border-[#c8c8c8] uppercase !underline"
                 href="https://www.instagram.com/truekind.skin/"
@@ -125,18 +129,18 @@ export default function Connect() {
                   Instagram
                 </span>
 
-                <div className="icon-global flex items-center justify-center bg-[#3b3b3b] w-[38px] h-[38px] rounded-[100%] aspect-square">
-                  <InstagramIcon className="min-w-[13px] min-h-[13px]" />
+                <div className="icon-global flex items-center justify-center bg-[#3b3b3b] text-white w-[38px] h-[38px] rounded-[100%] aspect-square">
+                  <InstagramIcon />
                 </div>
               </Link>
             </div>
 
-            <p className="connect__desc hidden text-[#787878] max-w-[232px] m-auto text-center">
+            <p className="connect__desc sm:hidden relative block text-figtree text-[#787878] max-w-[232px] top-[206px] m-auto text-center">
               Get the latest news about skincare tips and new products.
             </p>
           </div>
 
-          <div className="col block w-[16%] max-w-full">
+          <div className="connect__col sm:block hidden w-[16%] max-w-full">
             <motion.div
               className="media-img relative -bottom-[70%] w-full select-none"
               style={{
