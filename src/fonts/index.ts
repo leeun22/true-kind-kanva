@@ -3,7 +3,28 @@ import localFont from 'next/font/local'
 
 export const sentient = localFont({
   variable: '--font-sentient',
-  src: './Sentient-Light.woff2',
+  src: [
+    {
+      path: './Sentient-Light.woff2',
+      weight: '300', // Định nghĩa độ dày để sử dụng trong css
+      style: 'normal'
+    },
+    {
+      path: './Sentient-Regular.woff2',
+      weight: '400', //Default
+      style: 'normal'
+    },
+    {
+      path: './Sentient-Medium.woff2',
+      weight: '500',
+      style: 'normal'
+    },
+    {
+      path: './Sentient-Bold.woff2',
+      weight: '700',
+      style: 'normal'
+    }
+  ],
   display: 'swap'
 })
 
