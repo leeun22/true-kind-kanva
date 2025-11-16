@@ -1,13 +1,39 @@
 import { configureStore } from '@reduxjs/toolkit'
-import productsReducer from './features/products/productsSlice'
-import filtersReducer from './features/filters/filtersSlice'
+import cartReducer from './features/products/cartSlice'
 
-export const store = configureStore({
-  reducer: {
-    products: productsReducer,
-    filters: filtersReducer
+// Save state to localStorage
+const saveState = (state: RootState) => {
+  try {
+    const serializedState = JSON.stringify(state.cart)
+    localStorage.setItem('cartState', serializedState)
+  } catch (err) {
+    console.error('Could not save state to localStorage', err)
   }
-})
+}
 
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export const makeStore = () => {
+  const store = configureStore({
+    reducer: {
+      cart: cartReducer
+    }
+  })
+
+  // Subscribe to automatically save when state changes
+  let currentCartState = store.getState().cart
+
+  store.subscribe(() => {
+    const newCartState = store.getState().cart
+
+    // Save only when hydrated and state changed
+    if (newCartState.isHydrated && currentCartState !== newCartState) {
+      saveState(store.getState())
+      currentCartState = newCartState
+    }
+  })
+
+  return store
+}
+
+export type AppStore = ReturnType<typeof makeStore>
+export type RootState = ReturnType<AppStore['getState']>
+export type AppDispatch = AppStore['dispatch']
