@@ -19,13 +19,13 @@ export async function generateMetadata({ params }: { params: Promise<{ productHa
     // Main product url: Avoid duplicate content.
     alternates: {
       canonical: `/products/${productHandle}`
-    },
-    openGraph: {
-      title: product.name,
-      description: product.description,
-      images: [product.images.featureImage],
-      url: `/products/${productHandle}`
     }
+    // openGraph: {
+    //   title: product.name,
+    //   description: product.description,
+    //   images: [product.images.featureImage],
+    //   url: `/products/${productHandle}`
+    // }
   }
 }
 
