@@ -1,0 +1,69 @@
+.cartDialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.cartDialog[data-state='open']::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cartDialog[data-state='closing']::backdrop {
+  background: rgba(0, 0, 0, 0);
+}
+
+.cartSidebar {
+  transform: translateX(100%);
+  opacity: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.18, 0.71, 0.11, 1),
+    opacity 0.8s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+.cartDialog[data-state='open'] .cartSidebar {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.cartDialog[data-state='closing'] .cartSidebar {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.cartDrawerQtyInput {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.cartDrawerQtyInput::-webkit-inner-spin-button,
+.cartDrawerQtyInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.iconArrow {
+  width: 18px;
+  height: 15px;
+  transform-origin: center;
+  transition:
+    transform 0.8s cubic-bezier(0.18, 0.71, 0.11, 1),
+    opacity 0.3s cubic-bezier(0.18, 0.71, 0.11, 1);
+}
+
+:is(.cartDrawerBtnEmptyLink, .cartDrawerBtnCheckout) .iconArrow:first-child {
+  transform: translateX(0) scaleX(1);
+}
+
+:is(.cartDrawerBtnEmptyLink, .cartDrawerBtnCheckout[data-disabled='false']):hover .iconArrow:first-child {
+  transform: translateX(350%) scaleX(2);
+}
+
+:is(.cartDrawerBtnEmptyLink, .cartDrawerBtnCheckout) .iconArrow:last-child {
+  transform: translate(-300%, -50%) scaleX(2);
+  opacity: 0;
+}
+
+:is(.cartDrawerBtnEmptyLink, .cartDrawerBtnCheckout[data-disabled='false']):hover .iconArrow:last-child {
+  transform: translate(-50%, -50%) scaleX(1);
+  opacity: 1;
+}
