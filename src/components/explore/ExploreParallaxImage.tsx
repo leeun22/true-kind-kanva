@@ -12,7 +12,7 @@ const ExploreParallaxImage = ({ exploreItem, exploreBannerTransform }: ExplorePa
   return (
     <div className="half__grid-img parallax w-1/2 h-full overflow-hidden max-[768px]:hidden">
       <motion.div
-        className="parallax-image relative w-full h-[110%] object-cover user-select-none"
+        className="parallax-image relative w-full h-[110%] object-cover user-select-none pointer-events-none"
         style={{
           transform: exploreBannerTransform,
           transition: 'transform 0.5s ease-out'

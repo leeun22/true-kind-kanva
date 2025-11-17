@@ -35,13 +35,17 @@ export default function Header({ isStylesHome }: HeaderProps) {
     dispatch(setCartOpen(true))
   }
 
-  // Declare state to track menu state (default is closed/false)
+  // Declare state to track menu state on tablet (default is closed/false)
   const [isOpenMenu, setIsOpenMenu] = useState(false)
 
   // Get screen tablet status
-  const isTablet = useIsTablet()
-  const shouldLockScroll = isOpenMenu && isTablet
-  useScrollLock({ isLocked: shouldLockScroll })
+  // const isTablet = useIsTablet()
+  // const shouldLockScroll = isTablet
+  // useScrollLock({ isLocked: shouldLockScroll })
+
+  useScrollLock({
+    isLocked: isOpenMenu
+  })
 
   // Function to handle when clicking on the mobile menu toggle button
   const handleToggleMenu = useCallback(() => {
@@ -74,7 +78,8 @@ export default function Header({ isStylesHome }: HeaderProps) {
         isScrolled && styles.headerScrolled,
         isHidden && styles.headerHidden
       )}
-      data-state={isScrolled}
+      data-scrolled={isScrolled}
+      data-menu-tablet={isOpenMenu}
     >
       <div className="header__container max-w-container">
         <nav className={`navbar relative flex items-center justify-between py-[15px]`}>

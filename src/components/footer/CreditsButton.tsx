@@ -65,7 +65,7 @@ export const CreditsButton = ({ label }: { label: string }) => {
       </button>
 
       <ModalDialog
-        title="Disclaimer"
+        title="Credits"
         isOpen={isCreditsOpen}
         onClose={handleCreditsClose}
         desChildren={description}

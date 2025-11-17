@@ -39,7 +39,7 @@ export default function CartPopup() {
   return (
     <dialog
       ref={dialogRef}
-      className={`${styles.cartDialog} fixed inset-0 w-screen h-screen bg-transparent p-0 m-0 max-w-none max-h-none overflow-visible`}
+      className={`${styles.cartDialog} fixed inset-0 w-screen h-[100dvh] bg-transparent p-0 m-0 max-w-none max-h-none overflow-visible`}
       data-state="closed"
     >
       <div

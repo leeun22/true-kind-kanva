@@ -107,7 +107,7 @@ export default function ProductZeroToxics() {
             </div>
 
             <div className="w-[58%] max-[900px]:w-1/2 max-md:w-full max-w-full max-[768px]:order-1">
-              <div className="media-img w-full select-none">
+              <div className="media-img w-full select-none pointer-events-none">
                 <Image
                   className="w-full h-full object-cover"
                   src="/notoxics/zero-toxics-banner.jpg"

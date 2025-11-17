@@ -22,7 +22,7 @@ const BannerParallaxFooter = () => {
           transition: 'transform 0.5s ease-out'
         }}
       >
-        <div className="footer__parallax-image-desktop hidden min-[769px]:block w-full h-[100dvh] object-cover brightness-[1.08] select-none">
+        <div className="footer__parallax-image-desktop hidden min-[769px]:block w-full h-[100dvh] object-cover brightness-[1.08] select-none pointer-events-none">
           <Image
             className="media-img w-full max-w-full h-full object-cover"
             src="/footers/footer-banner.jpg"
@@ -35,7 +35,7 @@ const BannerParallaxFooter = () => {
           />
         </div>
 
-        <div className="footer__parallax-image-mobile block min-[769px]:hidden w-full h-[100dvh] object-cover brightness-[1.08] select-none">
+        <div className="footer__parallax-image-mobile block min-[769px]:hidden w-full h-[100dvh] object-cover brightness-[1.08] select-none pointer-events-none">
           <Image
             className="media-img w-full max-w-full h-full object-cover"
             src="/footers/footer-banner-m.jpg"
