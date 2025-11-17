@@ -95,7 +95,7 @@ export const getProductCoreData = async (handleURL: string): Promise<ProductCore
  * This is primarily used by generateStaticParams in dynamic routes.
  */
 export const getAllProductHandles = unstable_cache(
-  async (): Promise<string[]> => {
+  async (): Promise<{ productHandle: string }[]> => {
     try {
       const allProducts = await fetchAllProducts()
 
@@ -104,9 +104,11 @@ export const getAllProductHandles = unstable_cache(
         return []
       }
 
-      const handles = allProducts.map((prod) => prod.handleURL)
+      const handles = allProducts.map((prod) => ({
+        productHandle: prod.handleURL
+      }))
 
-      return handles
+      return handles as { productHandle: string }[]
     } catch (error) {
       console.error('Error fetching all product handles:', error)
       return []
