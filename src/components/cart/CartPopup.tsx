@@ -75,10 +75,10 @@ export default function CartPopup() {
               {/* Footer / CheckoutBtn */}
               <div className="cart-drawer__footer flex flex-col gap-[12px] pt-[12px] w-full">
                 <div className="cart-drawer__footer-subtotal flex justify-between items-center gap-[16px]">
-                  <span className="cart-drawer__footer-subtotal-label font-figtree text-[1.8rem] text-[#3b3b3b]">
+                  <span className="cart-drawer__footer-subtotal-label font-figtree text-[1.8rem] text-[#3b3b3b] select-none">
                     Subtotal
                   </span>
-                  <span className="cart-drawer__footer-subtotal-price font-figtree text-[1.8rem] text-[#3b3b3b]">
+                  <span className="cart-drawer__footer-subtotal-price font-figtree text-[1.8rem] text-[#3b3b3b] select-none">
                     {formattedSubtotal}
                   </span>
                 </div>
