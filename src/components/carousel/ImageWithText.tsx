@@ -35,9 +35,9 @@ export function ImageWithText({
   }, [isActive, hasAnimated])
 
   return (
-    <div className="relative flex flex-row items-center">
+    <div className="relative flex flex-row items-center w-full h-full">
       {src ? (
-        <div className="ImageWrapper relative w-[101%] h-[101%] flex grow overflow-hidden">
+        <div className="ImageWrapper relative w-full h-full flex grow overflow-hidden">
           <Image
             className="block w-full h-full object-[37%_45.7%] md:object-[left_center] object-cover"
             src={src}

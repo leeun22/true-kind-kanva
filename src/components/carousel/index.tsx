@@ -28,7 +28,7 @@ export default function Carousel() {
         onSwiper={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {carouselBanners.map((banner, index) => (
-          <SwiperSlide key={index} className="!flex max-[1024px]:!block max-[940px]:!flex">
+          <SwiperSlide key={index} className="block">
             <ImageWithText
               alt="Slideshow Image"
               src={banner.src}
