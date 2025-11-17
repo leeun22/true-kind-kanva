@@ -1,6 +1,5 @@
 export async function generateStaticParams() {
   const handles = ['collections', 'product-name', 'product-handle']
-
   return handles.map((handle) => ({
     handle: handle
   }))
