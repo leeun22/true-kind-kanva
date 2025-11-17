@@ -6,14 +6,6 @@ import Divider from '@/components/ui/Divider'
 import { notFound } from 'next/navigation'
 import { getAllProductHandles, getProductByHandleURL, getProductCoreData } from '@/lib/data/productByHandle'
 
-export async function generateStaticParams() {
-  const productHandles = await getAllProductHandles()
-
-  return productHandles.map((handle) => ({
-    productHandle: handle
-  }))
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ productHandle: string }> }): Promise<Metadata> {
   const { productHandle } = await params
   const product = await getProductByHandleURL(productHandle)
@@ -28,6 +20,14 @@ export async function generateMetadata({ params }: { params: Promise<{ productHa
       canonical: `/products/${productHandle}`
     } // Main product url: Avoid duplicate content.
   }
+}
+
+export async function generateStaticParams() {
+  const productHandles = await getAllProductHandles()
+
+  return productHandles.map((handle) => ({
+    productHandle: handle
+  }))
 }
 
 export default async function Product({ params }: { params: Promise<{ productHandle: string }> }) {
