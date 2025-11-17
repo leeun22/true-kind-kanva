@@ -55,9 +55,17 @@ const HeroBanner = () => {
               </motion.h2>
 
               <h2 className="collection__subtitle-mobile block md:hidden font-sentient text-fluid6xl xl:text-fluid7xl leading-[1] italic">
-                <span>complete</span>
+                <motion.span variants={motionTextVariants.fadeInUp} transition={{ duration: 0.3 }}>
+                  complete
+                </motion.span>
                 <br />
-                <span className="inline-block ml-[48%]">lineup</span>
+                <motion.span
+                  className="inline-block ml-[48%]"
+                  variants={motionTextVariants.fadeInUp}
+                  transition={{ duration: 0.3, delay: 0.5 }}
+                >
+                  lineup
+                </motion.span>
               </h2>
             </div>
           </div>
