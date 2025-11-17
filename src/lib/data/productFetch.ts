@@ -7,13 +7,7 @@ const BASE_API_URL = `${process.env.NEXT_PUBLIC_API_URL}`
 export const fetchAllProducts = unstable_cache(
   async (): Promise<Product[]> => {
     try {
-      if (!BASE_API_URL) {
-        throw new Error('BASE_API_URL is missing. Cannot fetch products.')
-      }
-
-      const URL = `${BASE_API_URL}/products`
-
-      const res = await fetch(URL, {
+      const res = await fetch(BASE_API_URL, {
         cache: 'force-cache'
       })
 
